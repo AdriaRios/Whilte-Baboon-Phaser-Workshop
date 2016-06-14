@@ -14,8 +14,6 @@ Wmandrel.HomeState = {
     this.play.events.onInputDown.add(this.btnClick, this);
   },
   btnClick: function(){
-    /*[CODE HERE]
-    * START GAME STATE
-    */
+    this.game.state.start('GameState');
   }
 };
