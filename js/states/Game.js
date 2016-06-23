@@ -19,13 +19,9 @@ Wmandrel.GameState = {
 
   //load the game assets before the game starts
   preload: function() {
-    this.load.image('grass', 'assets/images/grass.jpg');
     this.load.image('ground', 'assets/images/ground.png');
-    this.load.image('cup', 'assets/images/cup.png');
     this.load.image('platform', 'assets/images/platform.png');
     this.load.image('goal', 'assets/images/gorilla3.png');
-    this.load.image('arrowButton', 'assets/images/arrowButton.png');
-    this.load.image('actionButton', 'assets/images/actionButton.png');
     this.load.image('barrel', 'assets/images/barrel.png');
 
     this.load.spritesheet('player', 'assets/images/player_spritesheet.png', 28, 30, 5, 1, 1);
@@ -36,7 +32,6 @@ Wmandrel.GameState = {
   //executed after everything is loaded
   create: function() {
     //Add background color
-
     this.ground = this.add.sprite(0, 638, 'ground');
     this.game.physics.arcade.enable(this.ground);
     this.ground.body.allowGravity = false;
@@ -68,8 +63,6 @@ Wmandrel.GameState = {
 
     this.fires.setAll('body.allowGravity', false);
 
-    //cup
-    this.cup = this.add.sprite(this.levelData.goal.x - 10, this.levelData.goal.y +20, 'cup');
     //goal
     this.goal = this.add.sprite(this.levelData.goal.x, this.levelData.goal.y, 'goal');
     this.game.physics.arcade.enable(this.goal);
